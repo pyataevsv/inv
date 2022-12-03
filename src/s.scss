@@ -1,0 +1,15 @@
+@import './reset.scss';
+@import './global.scss';
+@import './variables';
+.container {
+  font-family: 'Manrope';
+  display: flex;
+  position: relative;
+
+  .content {
+    flex-grow: 2;
+    @media screen and (min-width: $m-width) {
+      margin-left: 85px;
+    }
+  }
+}

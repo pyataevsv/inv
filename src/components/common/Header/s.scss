@@ -1,0 +1,14 @@
+@import '../../../variables';
+
+.container {
+  height: 64px;
+  border-bottom: 1px solid #dce3ff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+
+  @media screen and (max-width: $m-width) {
+    display: none;
+  }
+}

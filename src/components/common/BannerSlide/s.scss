@@ -1,0 +1,30 @@
+@import '../../../variables';
+
+.slidecontainer {
+  padding: 26px 12px 36px 36px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 12px;
+  background-image: url('../../../assets/images/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  box-sizing: border-box;
+
+  .title {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: normal;
+  }
+
+  @media screen and (max-width: $m-width) {
+    background-image: url('../../../assets/images/banner_m.png');
+    padding-top: 40px;
+    height: 300px;
+    .description {
+      margin-bottom: 40px;
+    }
+  }
+}

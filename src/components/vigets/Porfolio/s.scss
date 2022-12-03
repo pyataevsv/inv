@@ -1,0 +1,109 @@
+@import '../../../variables';
+
+.container {
+  display: grid;
+  // div {
+  //   border: 1px solid black;
+  // }
+
+  @media screen and (min-width: $m-width) {
+    grid-template-columns: 80px 1fr 80px 120px 1fr 120px;
+    grid-template-rows: 50% 50%;
+
+    .portftitle {
+      grid-row: 1/2;
+      color: #546e7a;
+      align-self: end;
+      line-height: 19px;
+    }
+    .portficon {
+      grid-row: 1/3;
+      grid-column: 1/2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .difficon {
+      grid-row: 1/3;
+      grid-column: 3/4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .difftitle {
+      color: #546e7a;
+      grid-column: 4/5;
+      align-self: end;
+      line-height: 19px;
+    }
+    .diffvalue {
+      grid-row: 2/3;
+      grid-column: 4/5;
+      color: #4caf50;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 22px;
+    }
+    .value {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 22px;
+    }
+    .buttons {
+      grid-row: 1/3;
+      grid-column: 6/7;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .links {
+      grid-row: 2/3;
+      grid-column: 5/6;
+      align-self: start;
+    }
+  }
+  @media screen and (max-width: $m-width) {
+    grid-template-columns: 55px auto auto;
+    grid-template-rows: auto auto auto auto;
+
+    .portftitle {
+      color: #546e7a;
+      font-size: 12px;
+    }
+    .portficon {
+      grid-row: 1/5;
+      grid-column: 1/2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .difficon {
+      display: none;
+    }
+    .diffvalue {
+      color: #4caf50;
+    }
+    .value {
+      margin: 5px 0px 5px 0px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .buttons {
+      grid-row: 1/5;
+      grid-column: 3/4;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
+    .difftitle {
+      display: none;
+    }
+    .links {
+      grid-row: 4/5;
+      grid-column: 2/3;
+    }
+  }
+}

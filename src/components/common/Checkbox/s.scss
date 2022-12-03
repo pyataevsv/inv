@@ -1,0 +1,45 @@
+// import shape from '../../assets/img/Shape.png';
+
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  label {
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    &:hover {
+      &::before {
+        background-color: #4095f73c;
+      }
+    }
+  }
+
+  input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+  }
+
+  input:checked {
+    & + label::before {
+      content: url('../../../assets/icons/Shape.png');
+      border: 1px solid transparent;
+      background-color: #4094f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  label::before {
+    content: '';
+    border: 1px solid #b0babf;
+    border-radius: 4px;
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+  }
+}

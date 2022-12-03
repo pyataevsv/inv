@@ -1,0 +1,26 @@
+@mixin hover-supported {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+.link {
+  background-color: transparent;
+  border: none;
+  padding-right: 8px;
+  padding-left: 8px;
+  line-height: 24px;
+  color: #90a4ae;
+
+  @include hover-supported() {
+    &:hover {
+      background-color: #f4f6f8;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  }
+}
+
+.active {
+  color: #2962ff;
+}

@@ -1,0 +1,107 @@
+:global * {
+  @font-face {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    src: url('./assets/fonts/Manrope-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+  }
+  @font-face {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    src: url('./assets/fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    src: url('./assets/fonts/Manrope-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    src: url('./assets/fonts/Manrope-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    src: url('./assets/fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    src: url('./assets/fonts/Manrope-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    src: url('./assets/fonts/Manrope-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+  }
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  background-color: #fafafc;
+
+  input,
+  textarea,
+  button {
+    font-family: inherit;
+  }
+
+  * {
+    font-family: inherit !important;
+  }
+
+  input {
+    padding: 2px 12px 2px 12px;
+    background-color: #ffffff;
+    border: 1px solid #e5e9ff;
+    border-radius: 6px;
+
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.006em;
+    color: #252c32;
+
+    &:focus-visible,
+    &:focus {
+      border: 1px solid #5f73e7;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #bec0c8;
+    }
+  }
+
+  h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: normal;
+  }
+  small {
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: light;
+    color: #546e7a;
+  }
+}

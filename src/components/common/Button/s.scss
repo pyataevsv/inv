@@ -1,0 +1,151 @@
+.largefilled {
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1.1;
+  }
+
+  width: 100%;
+  background: linear-gradient(90deg, #da22ff, #9733ee);
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: opacity 200ms;
+}
+
+.largeoutline {
+  &:hover {
+    background-color: #a337ff;
+    cursor: pointer;
+    color: white;
+    border: 1px solid transparent;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  width: 100%;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid #a337ff;
+  color: #a53cfe;
+  font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: background-color 500ms;
+}
+
+.mediumoutline {
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 24px;
+  padding: 4px 12px 4px 12px;
+
+  background-color: transparent;
+  border: 1px solid #5e81f4;
+  color: #5e81f4;
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: #5e81f4;
+
+    color: white;
+    border: 1px solid transparent;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.mediumfilled {
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 24px;
+  padding: 4px 12px 4px 12px;
+
+  background-color: #5e81f4;
+  border: 1px solid #5e81f4;
+  color: white;
+  transition: opacity 200ms;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1.1;
+  }
+}
+
+.smalloutline {
+  &:hover {
+    background-color: #5e81f4;
+    cursor: pointer;
+    color: white;
+    border: 1px solid transparent;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  padding: 4px 15px 4px 15px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid #e5e9ff;
+  color: #90a4ae;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  transition: opacity 200ms;
+}
+
+.smallfilled {
+  background-color: #5e81f4;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-size: 12px;
+  line-height: 24px;
+  padding: 4px 15px 4px 15px;
+  transition: opacity 200ms;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1.1;
+  }
+}
+
+.mediumgrey {
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1.1;
+  }
+
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: none;
+  color: #11142d;
+  font-size: 12px;
+  padding: 8px 32px 8px 32px;
+  transition: opacity 200ms;
+}

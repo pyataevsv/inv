@@ -1,0 +1,22 @@
+.container {
+  .links {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12px;
+  }
+
+  .name {
+    color: #1c1d21;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .value {
+    color: #1c1d21;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: right;
+  }
+  .diff {
+    font-size: 12px;
+  }
+}

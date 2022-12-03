@@ -1,0 +1,26 @@
+@import '../../../variables';
+
+.container {
+  padding: 16px 12px 16px 12px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  position: relative;
+  &.withtitlte {
+    margin-top: 40px;
+  }
+}
+.h2 {
+  position: absolute;
+  top: -30px;
+  left: 10px;
+}
+
+.h1 {
+  position: absolute;
+  top: -50px;
+  left: 10px;
+
+  @media screen and (max-width: $m-width) {
+    top: -45px;
+  }
+}
