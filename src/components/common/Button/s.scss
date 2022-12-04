@@ -1,8 +1,16 @@
+@mixin hover-supported {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
 .largefilled {
+  @include hover-supported() {
   &:hover {
     cursor: pointer;
     opacity: 0.7;
   }
+}
 
   &:active {
     opacity: 1.1;
@@ -20,12 +28,14 @@
 }
 
 .largeoutline {
+  @include hover-supported() {
   &:hover {
     background-color: #a337ff;
     cursor: pointer;
     color: white;
     border: 1px solid transparent;
   }
+}
 
   &:active {
     opacity: 0.8;
@@ -54,12 +64,14 @@
   color: #5e81f4;
   transition: background-color 200ms;
 
+  @include hover-supported() {
   &:hover {
     background-color: #5e81f4;
 
     color: white;
     border: 1px solid transparent;
   }
+}
 
   &:active {
     opacity: 0.8;
@@ -78,9 +90,11 @@
   color: white;
   transition: opacity 200ms;
 
+  @include hover-supported() {
   &:hover {
     opacity: 0.8;
   }
+}
 
   &:active {
     opacity: 1.1;
@@ -88,12 +102,14 @@
 }
 
 .smalloutline {
+  @include hover-supported() {
   &:hover {
     background-color: #5e81f4;
     cursor: pointer;
     color: white;
     border: 1px solid transparent;
   }
+}
 
   &:active {
     opacity: 0.8;
@@ -121,10 +137,12 @@
   padding: 4px 15px 4px 15px;
   transition: opacity 200ms;
 
+  @include hover-supported() {
   &:hover {
     cursor: pointer;
     opacity: 0.8;
   }
+}
 
   &:active {
     opacity: 1.1;
@@ -132,9 +150,11 @@
 }
 
 .mediumgrey {
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8;
+  @include hover-supported() {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
   }
 
   &:active {

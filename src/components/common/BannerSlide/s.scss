@@ -6,7 +6,7 @@
   justify-content: space-between;
   flex-direction: column;
   border-radius: 12px;
-  background-image: url('../../../assets/images/banner.png');
+  // background-image: url('../../../assets/images/banner.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -17,6 +17,9 @@
     font-size: 20px;
     line-height: 40px;
     font-weight: normal;
+  }
+  .description {
+    margin-bottom: 20px;
   }
 
   @media screen and (max-width: $m-width) {

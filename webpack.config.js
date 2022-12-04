@@ -6,11 +6,12 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
 module.exports = {
-    entry: './src/index.tsx',
+    entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/'
+        assetModuleFilename: 'dist/assets/[name][ext]'
+        // publicPath: '/'
     },
     mode: 'development',
     devServer: {
@@ -24,14 +25,23 @@ module.exports = {
             {
                 test: /\.(png|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'assets/[hash][ext]'
+                }
             },
             {
                 test: /\.(woff|woff2|ttf|eot)$/,
-                type: 'asset/resource'
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/[hash][ext][query]'
+                }
             },
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
+                generator: {
+                    filename: 'assets/[hash][ext][query]'
+                }
             },
             {
                 test: /\.(js|ts)x?$/,
@@ -40,6 +50,9 @@ module.exports = {
 
                     loader: 'babel-loader'
                 },
+                generator: {
+                    filename: 'assets/[hash][ext][query]'
+                }
             },
             {
                 test: /\.s(c|a)ss$/i,
@@ -52,7 +65,10 @@ module.exports = {
                         },
                     },
                     "sass-loader"
-                ]
+                ],
+                generator: {
+                    filename: 'assets/[hash][ext][query]'
+                }
             },
 
         ]
@@ -66,5 +82,6 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js']
     },
+
 
 }

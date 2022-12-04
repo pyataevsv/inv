@@ -8,3 +8,5 @@ export const currencies = [
   'TROY',
   'FLV',
 ];
+
+export const mediaQueries = ['(max-width: 600px)', '(min-width: 600px)'];

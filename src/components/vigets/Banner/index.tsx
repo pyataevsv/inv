@@ -6,14 +6,23 @@ import 'swiper/css/pagination';
 import 'swiper/css/virtual';
 import { Pagination, Virtual } from 'swiper';
 import { BannerSlide } from '../../common/BannerSlide';
+import useMatchMedia from 'use-match-media-hook';
+import { mediaQueries } from '../../../helpers';
 
+export type Slide = {
+  mobImg: HTMLImageElement;
+  descImg: HTMLImageElement;
+  // title: string;
+  // description: string;
+};
 interface Props extends React.HTMLProps<HTMLDivElement> {
   marginTop?: boolean;
   autoRoll?: number;
+  slides: Slide[];
 }
 
-export const Banner = ({ marginTop, autoRoll }: Props) => {
-  const slides = 3;
+export const Banner = ({ slides, marginTop, autoRoll }: Props) => {
+  const [mobile, desctop] = useMatchMedia(mediaQueries);
 
   const Roller = () => {
     const swiper = useSwiper();
@@ -43,15 +52,11 @@ export const Banner = ({ marginTop, autoRoll }: Props) => {
         virtual
       >
         {autoRoll && <Roller />}
-        <SwiperSlide className={s.swiperslide}>
-          <BannerSlide />
-        </SwiperSlide>
-        <SwiperSlide className={s.swiperslide}>
-          <BannerSlide />
-        </SwiperSlide>
-        <SwiperSlide className={s.swiperslide}>
-          <BannerSlide />
-        </SwiperSlide>
+        {slides.map((i, key) => (
+          <SwiperSlide key={key}>
+            <BannerSlide img={mobile ? i.mobImg : i.descImg} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

@@ -3,11 +3,16 @@ import s from './s.scss';
 import $ from 'classnames';
 import { Button, ButtonType } from '../Button';
 
-interface Props extends React.HTMLProps<HTMLDivElement> {}
+interface Props extends React.HTMLProps<HTMLDivElement> {
+  img: HTMLImageElement;
+}
 
-export const BannerSlide = ({ ...props }: Props) => {
+export const BannerSlide = ({ img, ...props }: Props) => {
   return (
-    <div className={s.slidecontainer}>
+    <div
+      className={s.slidecontainer}
+      style={{ backgroundImage: `url(${img})` }}
+    >
       <div>
         <div className={s.title}>Elon Must Dodge hype</div>
         <div className={s.description}>
@@ -15,9 +20,7 @@ export const BannerSlide = ({ ...props }: Props) => {
         </div>
       </div>
       <div>
-        <Button type={ButtonType.mediumgrey} fill="grey">
-          Узнать
-        </Button>
+        <Button type={ButtonType.mediumgrey}>Узнать</Button>
       </div>
     </div>
   );

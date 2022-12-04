@@ -7,6 +7,8 @@ import { Route, useNavigate } from 'react-router';
 import { Book } from './components/pages/book';
 import { GlobalNav, MainRoute } from './components/vigets/GlobalNav';
 import { Dashboard } from './components/pages/Dashboard';
+import { Strats } from './components/pages/Strats';
+import { Header } from './components/common/Header';
 
 export const App = () => {
   return (
@@ -15,14 +17,17 @@ export const App = () => {
         <div className={s.container}>
           <GlobalNav />
           <div className={s.content}>
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="dashboard" element={<Dashboard />} />
-              <Route path="strategy" element={<h1>Strats</h1>} />
-              <Route path="portfolio" element={<h1>Portfolio</h1>} />
-              <Route path="profile" element={<h1>Profile</h1>} />
-              <Route path="book" element={<Book />} />
-            </Routes>
+            <Header />
+            <div className={s.page}>
+              <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="strategy" element={<Strats />} />
+                <Route path="portfolio" element={<h1>Portfolio</h1>} />
+                <Route path="profile" element={<h1>Profile</h1>} />
+                <Route path="book" element={<Book />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </BrowserRouter>
