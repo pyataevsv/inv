@@ -4,3 +4,7 @@ node_modules
 components/
 src/stories
 src/*
+src
+**/src
+src/
+.gitignore
